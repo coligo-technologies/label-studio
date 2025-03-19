@@ -1,7 +1,8 @@
 services:
   nginx:
     container_name: label-studio-nginx
-    image: heartexlabs/label-studio:1.16.0
+    build: .
+    image: heartexlabs/label-studio:latest
     restart: unless-stopped
     ports:
       - "80:8085"
@@ -33,7 +34,7 @@ services:
     stdin_open: true
     tty: true
     build: .
-    image: heartexlabs/label-studio:1.16.0
+    image: heartexlabs/label-studio:latest
     restart: unless-stopped
     expose:
       - "8000"
