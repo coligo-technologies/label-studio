@@ -51,7 +51,7 @@ services:
       - CSRF_TRUSTED_ORIGINS=https://label.coligo.ai
       - SSRF_PROTECTION_ENABLED=true
       - LABEL_STUDIO_DISABLE_SIGNUP_WITHOUT_LINK=true
-      - LABEL_STUDIO_USERNAME=m.bartman@coligo.ai
+      - LABEL_STUDIO_USERNAME=admin@coligo.ai
       - LABEL_STUDIO_PASSWORD=Cavalier-Parasite-Sesame
       - JSON_LOG=1
     #      - DEBUG=1
