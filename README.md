@@ -35,7 +35,11 @@ To publish your changes to the Hetzner machine:
    ```sh
    git pull origin customized
    ```
-4. Rebuild and restart the Docker containers:
+4. If the permission is denied, make sure to add the deploy key:
+   ```sh
+   ssh-add ~/.ssh/github_deploy_key
+   ```
+5. Rebuild and restart the Docker containers:
    ```sh
    docker compose up -d --build
    ```
