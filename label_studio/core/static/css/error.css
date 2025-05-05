@@ -75,9 +75,9 @@ body > .ls-global-error button:hover {
 }
 
 body > .ls-global-error button.ls-global-error__primary_button {
-  background-color: var(--color-primary-surface);
-  color: var(--color-primary-surface-content);
   transition: all 150ms ease-out;
+  background-color: #2ad2c9;
+  color: #fff;
 }
 
 body > .ls-global-error button.ls-global-error__primary_button:hover {

@@ -35,14 +35,19 @@ const ImportButtonWithChecks = ({ size }) => {
   // Check if user is on trial
   const isTrialExpired = window.APP_SETTINGS.billing.checks?.is_license_expired;
   // Check the subscription period end date
-  const subscriptionPeriodEnd = window.APP_SETTINGS.subscription?.current_period_end;
+  const subscriptionPeriodEnd =
+    window.APP_SETTINGS.subscription?.current_period_end;
   // Check if user is on Starter Cloud and has expired trial
-  const isStarterCloudExpiredTrial = isStarterCloud && isTrialExpired && !subscriptionPeriodEnd;
+  const isStarterCloudExpiredTrial =
+    isStarterCloud && isTrialExpired && !subscriptionPeriodEnd;
   // Check if user is on Starter Cloud and has expired subscription
   const isStarterCloudExpiredSubscription =
-    isStarterCloud && subscriptionPeriodEnd && new Date(subscriptionPeriodEnd) < new Date();
+    isStarterCloud &&
+    subscriptionPeriodEnd &&
+    new Date(subscriptionPeriodEnd) < new Date();
   // Check if user is on Starter Cloud and has expired trial or subscription
-  const isStarterCloudExpired = isStarterCloudExpiredTrial || isStarterCloudExpiredSubscription;
+  const isStarterCloudExpired =
+    isStarterCloudExpiredTrial || isStarterCloudExpiredSubscription;
 
   if (!isStarterCloudExpired) return simpleButton;
 
@@ -72,8 +77,22 @@ export const instruments = {
     return <DensityToggle size={size} />;
   },
   columns: ({ size }) => {
+    const iconProps = {
+      size: 16,
+      style: {
+        marginRight: 4,
+      },
+      icon: FaAngleDown,
+      color: "#2ad2c9",
+    };
     return (
-      <FieldsButton multiSelect={true} title={"Columns"} size={size} style={style} openUpwardForShortViewport={false} />
+      <FieldsButton
+        multiSelect={true}
+        title={"Columns"}
+        size={size}
+        style={style}
+        openUpwardForShortViewport={false}
+      />
     );
   },
   filters: ({ size }) => {
