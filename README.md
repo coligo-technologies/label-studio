@@ -39,9 +39,19 @@ To publish your changes to the Hetzner machine:
    ```sh
    ssh-add ~/.ssh/github_deploy_key
    ```
+   If SSH doesn't work at all, run:
+   ```sh
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/github_deploy_key
+   ```
 5. Rebuild and restart the Docker containers:
    ```sh
    docker compose up -d --build
+   ```
+   If there is a problem with the certificate, run:
+   ```sh
+   certbot renew --webroot-path /mnt/labelstudio-volume-0/user_data/nginx/webroot/ --dry-run
+   chown user:user /etc/letsencrypt/archive/label.coligo.ai/*
    ```
 
 Your changes should now be live on the server.
