@@ -76,7 +76,7 @@ export const instruments = {
         marginRight: 4,
       },
       icon: FaAngleDown,
-      color: "#566fcf",
+      color: "#2ad2c9",
     };
     return (
       <FieldsButton

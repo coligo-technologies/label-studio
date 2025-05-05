@@ -29,7 +29,7 @@ export const FiltersButton = buttonInjector(
               {activeFiltersNumber}
             </Badge>
           )}
-          <FaAngleDown size="16" style={{ marginLeft: 4 }} color="#566fcf" />
+          <FaAngleDown size="16" style={{ marginLeft: 4 }} color="#2ad2c9" />
         </Button>
       );
     }),

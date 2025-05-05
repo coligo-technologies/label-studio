@@ -136,7 +136,7 @@ export const ActionsButton = injector(
       >
         <Button size={size} disabled={!hasSelected} {...rest}>
           {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "Actions"}
-          <FaAngleDown size="16" style={{ marginLeft: 4 }} color="#566fcf" />
+          <FaAngleDown size="16" style={{ marginLeft: 4 }} color="#2ad2c9" />
         </Button>
       </Dropdown.Trigger>
     );
